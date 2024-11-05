@@ -1,6 +1,6 @@
 # COVELA - MOBILE ⭐
 
-🔵 README : TUGAS 7
+## 🔵 README : TUGAS 7
 
 ## 1) Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget, dan jelaskan perbedaan dari keduanya.
 
