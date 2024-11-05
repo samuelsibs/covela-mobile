@@ -59,6 +59,7 @@ final digunakan untuk variabel yang nilainya akan ditetapkan hanya satu kali dan
 - Membuat list of ItemHomepage yang berisi tombol-tombol yang ingin ditambahkan pada class MyHomePage. Tombol yang ditambahkan adalah tombol “Lihat Daftar Produk, tombol “Tambah Produk” dan tombol “Logout”
 - Membuat class ItemCard untuk menampilkan tombol-tombol
 - Mengubah bagian Widget build() pada class MyHomePage agar dapat mengintegrasikan dan menampilkan seluruh card yang ada di HomePage
+- Menambahkan attribute color pada kelas ItemHomePage dan memberikan warna yang berbeda pada tiap button dengan cara menambahkan color pada parameter tombolnya di list of ItemHomePage
 - git add,commit dan push!
 
 
