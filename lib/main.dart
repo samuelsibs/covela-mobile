@@ -1,4 +1,4 @@
-import 'package:covela/menu.dart';
+import 'package:covela/screens/menu.dart';
 import 'package:flutter/material.dart';
 
 void main() {
