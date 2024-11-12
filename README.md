@@ -63,5 +63,21 @@ final digunakan untuk variabel yang nilainya akan ditetapkan hanya satu kali dan
 - git add,commit dan push!
 
 
+## 🔵 README : TUGAS 8
 
+## 1) Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?
+const digunakan untuk membuat nilai atau objek yang tidak berubah pada saat proses compile. Dengan menggunakan const kita bisa meningkatkan efisiensi aplikasi dengan mengurangi penggunaan memori dan meningkatkan performa, karena objek yang sama tidak dibuat berulang-ulang. Kita sebaiknya menggunakan const jika widget atau nilai tetap (tidak berubah) selama aplikasi berjalan. Tidak perlu menggunakan const jika nilai atau widget tersebut dapat berubah di runtime.
 
+## 2) Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!
+- Column itu untuk menyusun widget secara vertikal. Contoh: Column(children: [Text('Item 1'), Text('Item 2')]).
+- Row itu untuk menyusun widget secara horizontal. Contoh: Row(children: [Icon(Icons.home), Text('Home')]).
+
+## 3) Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+Elemen input yang digunakan adalah TextFormField untuk menerima masukan teks, jumlah, deskripsi, dan kuantitas.
+Elemen input lain yang tidak digunakan di tugas ini: DropdownButton, Checkbox, Slider, Switch. Elemen-elemen ini dapat digunakan jika ingin menyediakan pilihan tertentu, opsi biner, atau input numerik yang bisa diubah dengan cara geser.
+
+## 4) Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+Tema dapat diatur melalui ThemeData di dalam MaterialApp, seperti dengan colorScheme untuk menetapkan warna konsisten di seluruh aplikasi. ThemeData diterapkan dengan pengaturan primarySwatch agar warna konsisten.
+
+## 5) Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+Navigasi dikelola menggunakan Navigator.push atau Navigator.pushReplacement untuk berpindah antar halaman.
