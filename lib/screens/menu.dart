@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         // Judul aplikasi "Covela" dengan teks putih dan tebal.
         title: const Text(
-          'Tes',
+          'Covela',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,

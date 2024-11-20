@@ -1,3 +1,4 @@
+import 'package:covela/screens/list_productentry.dart';
 import 'package:flutter/material.dart';
 import 'package:covela/screens/menu.dart';
 import 'package:covela/screens/productentry_form.dart';
@@ -61,6 +62,17 @@ class LeftDrawer extends StatelessWidget {
                 ));
             },
           ),
+
+          ListTile(
+            leading: const Icon(Icons.add_to_home_screen),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductEntryPage()),
+                );
+            },
+        ),
         ],
       ),
     );
