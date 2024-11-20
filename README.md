@@ -81,3 +81,34 @@ Tema dapat diatur melalui ThemeData di dalam MaterialApp, seperti dengan colorSc
 
 ## 5) Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
 Navigasi dikelola menggunakan Navigator.push atau Navigator.pushReplacement untuk berpindah antar halaman.
+
+## 🔵 README : TUGAS 9
+
+## 1) Jelaskan mengapa kita perlu membuat model untuk melakukan pengambilan ataupun pengiriman data JSON? Apakah akan terjadi error jika kita tidak membuat model terlebih dahulu?
+Membuat model untuk pengambilan atau pengiriman data JSON penting untuk memastikan validasi struktur dan tipe data, sehingga mengurangi risiko error saat memprosesnya. Model juga memudahkan manipulasi data, menjaga konsistensi, dan mempermudah pengelolaan aplikasi, terutama jika data berasal dari berbagai sumber. Meskipun tidak selalu menyebabkan error jika model tidak dibuat, risiko kesalahan parsing, tipe data, dan debugging yang lebih sulit akan meningkat.
+
+## 2) Jelaskan fungsi dari library http yang sudah kamu implementasikan pada tugas ini.
+Library http pada Flutter berfungsi sebagai alat untuk berkomunikasi dengan Web Service melalui protokol HTTP. Dalam tugas ini, library tersebut digunakan untuk melakukan fetch data dari Web Service
+
+## 3) Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+CookieRequest berfungsi sebagai alat untuk mengelola sesi pengguna dengan menyimpan cookie dari server, sehingga memungkinkan autentikasi dan otorisasi secara berkelanjutan tanpa harus mengirimkan ulang kredensial setiap kali melakukan request. Instance CookieRequest perlu dibagikan ke semua komponen aplikasi Flutter agar setiap bagian aplikasi dapat mengakses sesi yang sama, menjaga konsistensi status pengguna di seluruh fitur aplikasi.
+
+## 4) Jelaskan mekanisme pengiriman data mulai dari input hingga dapat ditampilkan pada Flutter.
+Mekanisme pengiriman data dimulai dari input pengguna di Flutter, misalnya melalui form. Data ini dikirimkan ke server menggunakan metode HTTP (POST atau GET) melalui library seperti http atau CookieRequest. Server menerima data, memprosesnya (misalnya menyimpan ke database atau mengembalikan respons), dan mengirimkan data yang sesuai kembali ke aplikasi Flutter. Data ini kemudian diubah menjadi model dan ditampilkan di antarmuka.
+
+## 5) Jelaskan mekanisme autentikasi dari login, register, hingga logout. Mulai dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+Mekanisme autentikasi melibatkan beberapa tahap. Saat pengguna login atau register, data akun dikirim dari Flutter ke server Django melalui API endpoint yang telah disiapkan. Django memvalidasi data tersebut, dan jika valid, server membuat atau memverifikasi sesi pengguna serta mengembalikan respons yang berisi cookie autentikasi. Setelah login berhasil, cookie ini digunakan untuk setiap request selanjutnya, seperti mengakses menu atau fitur lain di aplikasi Flutter. Saat logout, Flutter mengirim permintaan ke Django untuk menghapus sesi, memastikan pengguna keluar secara aman, dan aplikasi kembali ke status awal.
+
+STEP BY STEP🪜
+- Membuat django app baru bernama "authentication" serta mengimplementasikan function login,register dan logout di dalam views.py
+- Menginstall package yang telah disediakan tim Asdos untuk keperluan integrasi sistem autentikasi pada Flutter dan menyediakan CookieRequest library ke semua child widgets dengan menggunakan Provider.
+- Membuat file baru bernama "login.dart" untuk halaman login dan "register.dart" untuk halaman registernya
+- Pada file main.dart, pada Widget MaterialApp(...), dirubah home: MyHomePage() menjadi home: const LoginPage()
+- Membuat model kustom dengan menggunakan web Quicktype dan memasukkan kode yang diperoleh ke file "product_entry.dart"
+- Pada file android/app/src/main/AndroidManifest.xml,ditambahkan kode untuk memperbolehkan akses Internet pada aplikasi Flutter yang sedang dibuat.
+- Membuat berkas baru pada direktori lib/screens dengan nama list_productentry.dart untuk menampilkan daftar produk
+- Melakukan redirection dengan menambahkan else if untuk tombol "Lihat Produk"
+- Pada proyek django, ditambahkan fungsi view baru di main/views.py dengan nama create_product_flutter
+- Menghubungkan halaman productentry_form.dart dengan CookieRequest
+- Mengimplementasikan "async" pada product_card.dart agar widget Inkwell dapat melakukan proses logout secara asinkronus.
+
